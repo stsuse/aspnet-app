@@ -1,1 +1,15 @@
+stages:
+- name: Compile
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: echo aa
+- name: deploy
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: myaspnetapp:v1
+      pushRemote: true
+      registry: 127.0.0.1:34501
 timeout: 60
