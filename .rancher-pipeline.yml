@@ -20,7 +20,7 @@ stages:
     env:
       PLUGIN_DEBUG: "true" 
 - name: Deploy some workloads
-   steps:
+  steps:
    - applyYamlConfig:
         path: ./deployment.yaml
 timeout: 60
