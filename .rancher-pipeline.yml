@@ -8,8 +8,9 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: echo aa- name: deploy
-  steps:
+      shellScript: echo aa- 
+- name: deploy
+  steps: 
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
