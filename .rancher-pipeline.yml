@@ -15,6 +15,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: myaspnetapp:v1
-      pushRemote: false
-      registry: 127.0.0.1:34501
+      #pushRemote: false
+      #registry: 127.0.0.1:34501
 timeout: 60
