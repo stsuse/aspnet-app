@@ -4,7 +4,11 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: echo aa
-- name: deploy
+- name: Compile2
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: echo aa- name: deploy
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
