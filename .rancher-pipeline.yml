@@ -4,12 +4,7 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: echo aa
-- name: Compile2
-  steps:
-  - runScriptConfig:
-      image: node:latest
-      shellScript: echo aa- 
-- name: deploy
+- name: Create container
   steps: 
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
@@ -19,7 +14,7 @@ stages:
       registry: 127.0.0.1:34501
     env: 
       PLUGIN_DEBUG: "true" 
-- name: Deploy some workloads
+- name: Deploy container workload
   steps:
    - applyYamlConfig:
         path: ./deployment.yaml
