@@ -17,7 +17,7 @@ stages:
       tag: myaspnetapp:v1
       pushRemote: false
       registry: 127.0.0.1:34501
-    env:
+    env: 
       PLUGIN_DEBUG: "true" 
 - name: Deploy some workloads
   steps:
